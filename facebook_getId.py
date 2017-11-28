@@ -1,6 +1,7 @@
 from selenium import webdriver
 import re
 import time
+from bs4 import BeautifulSoup
 
 fburl = input("please input facebook address : ")
 url_web = 'http://lookup-id.com/'
@@ -15,6 +16,9 @@ clickme.click()
 time.sleep(5)
 html_code = browser.page_source
 #print(html_code)
-ma = re.search('<span id="code">(.*?)</span>', html_code)
-print(ma.group(1))
+#ma = re.search('<span id="code">(.*?)</span>', html_code)
+#print(ma.group(1))
+bs = BeautifulSoup(html_code,'lxml')
+num = bs.find('span', id='code')
+print(num.text)
 browser.quit()
