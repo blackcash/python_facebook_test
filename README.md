@@ -12,3 +12,9 @@
 (1)匯入要使用的facebook api : import facebook  <br>
 (2)建構使用的物件:graph = facebook.GraphAPI(access_token=token,version=version) <br>
 (3)使用物件取得資料(取得有留言且限制1000筆):graph.get_object(id=object_id+'?fields=comments.limit(1000)') <br>
+
+#demo:
+<br>
+tk_demo_test1.py : 測試使用tkinter來控制文字顯示與否<br>
+<br>
+facebook_getId.py : 測試使用selenium來取得facebook id<br>
