@@ -1,10 +1,10 @@
 import facebook
 import random
 
-token = ''  # 所使用的token
+token = input("請輸入使用的token:")  # 所使用的token
 version = '2.7'  # 使用的API版本
 graph = facebook.GraphAPI(access_token=token,version=version)
-object_id = ""  # 要抓取的文章ID
+object_id = input("要抓取的文章ID:")  # 要抓取的文章ID
 
 #取得按讚的人數
 list_likes = []
